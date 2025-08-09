@@ -34,21 +34,24 @@
             #region LINQ - Element Operators
             #region Q1
             //1. Get first Product out of Stock 
-
-
+            //var result = ListGenerators.ProductList.First(Product => Product.UnitsInStock == 0);
+            //result.print(); 
             #endregion
 
 
 
             #region Q2
             // 2.Return the first product whose Price > 1000, unless there is no match, in which case null is returned.
-
+            //var result = ListGenerators.ProductList.FirstOrDefault(Product => Product.UnitPrice > 1000);
+            //result?.print(); 
             #endregion
 
 
             #region Q3
             //3. Retrieve the second number greater than 5 
-
+            int[] Arr = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+            var result = Arr.Where(x => x > 5).Skip(1).FirstOrDefault();
+            result.print();
 
 
             #endregion
